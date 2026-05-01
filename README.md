@@ -5,8 +5,7 @@
 기본 CNN과 ResNet 모델을 구현하고 성능을 비교하는 것을 목표로 한다.  
 
 특히 CNN의 구조적 한계(깊어질수록 성능 저하)를 분석하고,  
-ResNet이 이를 어떻게 해결하는지 실험적으로 검증하였다. :contentReference[oaicite:0]{index=0}
-
+ResNet이 이를 어떻게 해결하는지 실험적으로 검증하였다. 
 ---
 
 ## 🧠 ResNet 핵심 개념
