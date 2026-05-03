@@ -1,4 +1,4 @@
-# 📊 CNN vs ResNet (CIFAR-10 Image Classification)
+#  CNN vs ResNet (CIFAR-10 Image Classification)
 
 ## 프로젝트 개요
 본 프로젝트는 CIFAR-10 데이터셋을 기반으로  
@@ -8,9 +8,9 @@
 ResNet이 이를 어떻게 해결하는지 실험적으로 검증하였다. 
 ---
 
-## 🧠 ResNet 핵심 개념
+## ResNet 핵심 개념
 
-### ✔ Residual Learning
+### Residual Learning
 기존 CNN:
 H(x)
 
@@ -23,56 +23,56 @@ H(x) = F(x) + x
 
 ---
 
-## 🏗️ ResNet 구조
+## ResNet 구조
 
-### ✔ Residual Block
+###  Residual Block
 - Conv → BN → ReLU → Conv → BN → + input
 
-### ✔ Skip Connection
+###  Skip Connection
 - 입력을 출력에 직접 더함
 
-### ✔ Projection Shortcut
+###  Projection Shortcut
 - 차원 불일치 해결을 위해 1x1 convolution 사용 :contentReference[oaicite:2]{index=2}
 
 ---
 
-## 🚀 모델 개선 (본 프로젝트 적용)
+##  모델 개선 (본 프로젝트 적용)
 
-### 1️⃣ 채널 확장
+### 1. 채널 확장
 - 기존: 16 channel 고정
 - 개선: 32 → 64 → 128
 
-👉 더 다양한 feature 표현 가능 :contentReference[oaicite:3]{index=3}
+ 더 다양한 feature 표현 가능 :contentReference[oaicite:3]{index=3}
 
 ---
 
-### 2️⃣ Downsampling 적용
+### 2. Downsampling 적용
 - stride=2 사용
 - 공간 크기 감소 → 추상적 특징 학습
 
 ---
 
-### 3️⃣ Projection Shortcut
+### 3. Projection Shortcut
 - 채널 및 feature map 크기 mismatch 해결
 - 1×1 convolution 사용 :contentReference[oaicite:4]{index=4}
 
 ---
 
-### 4️⃣ Batch Normalization + ReLU
+### 4. Batch Normalization + ReLU
 - Conv → BN → ReLU 구조 유지
 - 학습 안정성 향상
 - gradient 흐름 개선 :contentReference[oaicite:5]{index=5}
 
 ---
 
-### 5️⃣ 데이터 증강 및 학습 튜닝
+### 5. 데이터 증강 및 학습 튜닝
 - RandomHorizontalFlip 적용
 - Dropout (0.3에서 최고 성능)
 - 학습률 0.01 → 0.001 조정 :contentReference[oaicite:6]{index=6}
 
 ---
 
-## 📈 실험 결과
+## 실험 결과
 
 | 모델 | 정확도 |
 |------|--------|
@@ -81,11 +81,11 @@ H(x) = F(x) + x
 | ResNet (개선 전) | 69.7% |
 | ResNet (개선 후) | **84.64%** |
 
-👉 ResNet 구조 개선 후 성능 크게 향상 :contentReference[oaicite:7]{index=7}
+ ResNet 구조 개선 후 성능 크게 향상 :contentReference[oaicite:7]{index=7}
 
 ---
 
-## 🔥 핵심 결론
+## 결론
 
 - CNN은 깊어질수록 성능 저하 및 학습 불안정 발생
 - ResNet은 skip connection을 통해 gradient 문제 해결
@@ -94,11 +94,11 @@ H(x) = F(x) + x
 
 ---
 
-## 💡 핵심 요약
+##  핵심 요약
 
-👉 ResNet = "깊은 네트워크에서도 학습이 가능하게 만든 구조"
+ResNet = "깊은 네트워크에서도 학습이 가능하게 만든 구조" (residual 중요)
 
 ---
 
-## 📚 참고
+##  참고
 - He et al., Deep Residual Learning for Image Recognition (2016)
